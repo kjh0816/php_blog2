@@ -1,0 +1,18 @@
+div {
+    letter-spacing: 0;
+    font-weight: bold;
+    color: darkorchid;
+}
+
+article {
+    color: black;
+}
+section{
+    font-size: 20px;
+    color: red;
+}
+
+.title {
+    font-size: 1.3rem;
+    color: greenyellow;
+}
