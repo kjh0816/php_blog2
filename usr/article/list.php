@@ -3,29 +3,17 @@
 $db_conn = mysqli_connect("127.0.0.1", "jhmysql", "sbs123414", "php_blog");
 
 $sql = "
-SELECT * FROM article
-ORDER BY id DESC;
+SELECT * FROM article;
 ";
 
-
 $rs = mysqli_query($db_conn, $sql);
-
-
 
 $articles = [];
 
 while($article = mysqli_fetch_assoc($rs)){
-
-
     $articles[] = $article;
-
 }
-
-
-
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,13 +25,23 @@ while($article = mysqli_fetch_assoc($rs)){
     <link rel="stylesheet" href="common.css">
 </head>
 <body>
-    <div>
-    <?php foreach($articles as $article){ ?>
-            번호     : <?=$article['id']?><br>
-            제목     : <?=$article['title']?><br>
-            작성날짜 : <?=$article['regDate']?><br>
-            수정날짜 : <?=$article['updateDate']?> <br>   
-    <?php } ?>
-    </div>
+<div ><a href="write.php">글쓰기</a></div>
+<hr>
+
+<div>
+<?php foreach($articles as $article){?>
+        번호 : <?=$article['id']?><br>
+        제목 : <?=$article['title']?><br>
+        작성날짜 : <?=$article['regDate']?><br>
+        수정날짜 : <?=$article['updateDate']?><br>
+        <a href="detail.php?id=<?=$article['id']?>">상세보기</a>
+        <hr>
+<?php } ?>
+    
+
+
+
+</div>
+    
 </body>
 </html>

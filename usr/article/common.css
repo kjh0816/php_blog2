@@ -1,18 +1,15 @@
-div {
-    letter-spacing: 0;
+div{
     font-weight: bold;
-    color: darkorchid;
 }
 
-article {
-    color: black;
-}
-section{
-    font-size: 20px;
+.delete {
+    
+    font-weight: bold;
     color: red;
 }
 
-.title {
-    font-size: 1.3rem;
-    color: greenyellow;
+.negative_title{
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: gray;
 }
